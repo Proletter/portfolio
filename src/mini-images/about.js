@@ -4,27 +4,27 @@ import generateSkills from "./skills";
 
 export default [
   {
-    src: "/images/skills.png",
+    src: "./images/skills.png",
     alt: "skills",
     label: "Skills",
     text: generateSkills(),
     direction: "left",
   },
   {
-    src: "/images/home.png",
+    src: "./images/home.png",
     alt: "projects",
     label: "Home",
     direction: "bottom",
   },
   {
-    src: "/images/interests.png",
+    src: "./images/interests.png",
     alt: "interests",
     label: "Interests",
     text: common.interests,
     direction: "right",
   },
   {
-    src: "/images/about-me.png",
+    src: "./images/about-me.png",
     alt: "about-me",
     label: "About me",
     text: common.aboutMe,

@@ -1,6 +1,6 @@
 export default [
   {
-    src: "/images/neumopaste.png",
+    src: "./images/neumopaste.png",
     alt: "Neumopaste",
     url: "https://neumo-paste.herokuapp.com",
     label: "Neumopaste",
@@ -9,7 +9,7 @@ export default [
     direction: "left",
   },
   {
-    src: "/images/itstime.png",
+    src: "./images/itstime.png",
     alt: "Itstime",
     url: "https://itstime.vercel.app",
     label: "Itstime",
@@ -17,13 +17,13 @@ export default [
     direction: "left",
   },
   {
-    src: "/images/home.png",
+    src: "./images/home.png",
     alt: "projects",
     label: "Home",
     direction: "bottom",
   },
   {
-    src: "/images/socix.png",
+    src: "./images/socix.png",
     alt: "Socix",
     url: "https://socix.vercel.app",
     label: "Socix",
@@ -31,7 +31,7 @@ export default [
     direction: "right",
   },
   {
-    src: "/images/fastweather.png",
+    src: "./images/fastweather.png",
     alt: "fast-weather",
     url: "https://github.com/collinsuzebu/fastweather",
     label: "FastWeather",
@@ -40,7 +40,7 @@ export default [
     direction: "right",
   },
   {
-    src: "/images/pi-monitor.png",
+    src: "./images/pi-monitor.png",
     alt: "pi-monitor",
     url: "https://github.com/collinsuzebu/pimonitor",
     label: "Pi monitor",
