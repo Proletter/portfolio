@@ -100,7 +100,7 @@ export default function Globe() {
             key={index}
             target="_blank"
             rel="noreferrer"
-            href={image.url}
+            href={"/portfolio" + image.url}
             className={`circle ${fadeIn && "fadeIn"}`}
             onClick={toggleCircles}
           >
