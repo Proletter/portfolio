@@ -100,7 +100,7 @@ export default function Globe() {
             key={index}
             target="_blank"
             rel="noreferrer"
-            href={"/portfolio" + image.url}
+            href={image.url}
             className={`circle ${fadeIn && "fadeIn"}`}
             onClick={toggleCircles}
           >
@@ -110,7 +110,7 @@ export default function Globe() {
               direction={image.direction}
               spinning={fastSpin}
             >
-              <img src={image.src} alt={image.alt} />
+              <img src={"/portfolio" + image.src} alt={image.alt} />
             </Tooltip>
           </a>
         ))}
