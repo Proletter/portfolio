@@ -1,0 +1,191 @@
+/* Big Globe */
+
+.big__globe {
+  background-color: #292929;
+  border-radius: 50%;
+  margin: 50px;
+  width: 15em;
+  height: 15em;
+  margin-bottom: 60px;
+  position: relative;
+  border: #303030 35px solid;
+}
+
+.big__globe img {
+  width: 100%;
+  height: 100%;
+  /* filter: grayscale(100%); */
+}
+
+.ciclegraph {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  margin: calc(100px / 2 + 0px);
+}
+
+.ciclegraph:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 2px * 2);
+  height: calc(100% - 2px * 2);
+  border-radius: 50%;
+  border: rgba(119, 119, 119, 0.1) 2px solid;
+}
+
+.ciclegraph .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  margin: calc(-100px / 2);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.ciclegraph a img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4em;
+  height: 4em;
+  margin: -2em;
+  filter: grayscale(100%);
+}
+
+/* Media Queries /* For Mobile: */
+
+@media only screen and (max-width: 768px) {
+  .big__globe {
+    width: 7em;
+    height: 7em;
+    border: #303030 15px solid;
+  }
+
+  /* Small Circles */
+  .ciclegraph {
+    width: 200px;
+    height: 200px;
+    margin: calc(100px / 2 + 0px);
+  }
+
+  .ciclegraph a img {
+    width: 1.5em;
+    height: 1.5em;
+    margin: -0.75em;
+  }
+
+  .ciclegraph .circle {
+    width: 50px;
+    height: 50px;
+    margin: calc(-52px / 2);
+  }
+}
+
+.ciclegraph a img:hover {
+  animation: filler 1s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes filler {
+  100% {
+    filter: grayscale(0%);
+  }
+}
+
+/* Animation */
+.ciclegraph.spin {
+  background-clip: content-box;
+  animation: spin 1s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(3deg);
+  }
+  50% {
+    transform: rotateZ(-2deg);
+  }
+  75% {
+    transform: rotateZ(1deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+/* Pulse */
+
+.ciclegraph.spin:before {
+  animation: pulse 0.5s alternate;
+}
+
+@keyframes pulse {
+  from {
+    border: rgb(100, 100, 100) 2px solid;
+  }
+  to {
+    border: rgba(238, 194, 0, 0.2) 2px solid;
+  }
+}
+
+/* Animation2 */
+.ciclegraph.fadeSpin {
+  background-clip: content-box;
+  animation: fadeSpin 1s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeSpin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(15deg);
+  }
+  50% {
+    transform: rotateZ(-15deg);
+  }
+  75% {
+    transform: rotateZ(5deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+/* Pulse */
+
+.ciclegraph.fadeSpin:before {
+  animation: pulse 0.5s alternate;
+}
+
+@keyframes pulse {
+  from {
+    border: rgb(100, 100, 100) 2px solid;
+  }
+  to {
+    border: rgba(238, 194, 0, 0.2) 2px solid;
+  }
+}
+
+.ciclegraph .fadeIn {
+  animation: fadeInAnimation 1s linear forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
