@@ -4,8 +4,8 @@
   background-color: #292929;
   border-radius: 50%;
   margin: 50px;
-  width: 15em;
-  height: 15em;
+  width: 13em;
+  height: 13em;
   margin-bottom: 60px;
   position: relative;
   border: #303030 35px solid;
@@ -19,8 +19,8 @@
 
 .ciclegraph {
   position: absolute;
-  width: 500px;
-  height: 500px;
+  width: 450px;
+  height: 450px;
   margin: calc(100px / 2 + 0px);
 }
 
@@ -51,10 +51,39 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 4em;
-  height: 4em;
-  margin: -2em;
+  width: 3.5em;
+  height: 3.5em;
+  margin: -1.65em;
   filter: grayscale(100%);
+}
+
+/* Media Queries /* For Ipad: */
+
+@media only screen and (max-width: 1024px) {
+  .big__globe {
+    width: 11em;
+    height: 11em;
+    border: #303030 25px solid;
+  }
+
+  /* Small Circles */
+  .ciclegraph {
+    width: 400px;
+    height: 400px;
+    margin: calc(100px / 2 + 0px);
+  }
+
+  .ciclegraph a img {
+    width: 3em;
+    height: 3em;
+    margin: -1.5em;
+  }
+
+  .ciclegraph .circle {
+    width: 50px;
+    height: 50px;
+    margin: calc(-52px / 2);
+  }
 }
 
 /* Media Queries /* For Mobile: */
